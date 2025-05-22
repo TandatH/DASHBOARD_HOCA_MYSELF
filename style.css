@@ -1,0 +1,198 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2a7f8e;
+}
+
+.main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+/* Fish Section */
+.fish-section {
+    background-color: #d1f3ff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fish-gif {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.realtime-clock {
+    background-color: #e6fcff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #036;
+    text-align: center;
+}
+
+/* Sensors Section */
+.section {
+    background-color: #f7ffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #117a8b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sensors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.sensor-box {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+}
+
+.sensor-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sensor-label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.sensor-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a7f8e;
+}
+
+/* Control Section */
+.controls-section .device-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.device-status {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.device-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.control-buttons button,
+.timer-controls button {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-on {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-off {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-timer {
+    background-color: #2196f3;
+    color: white;
+}
+
+input[type="time"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+}
+
+.timer-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Status classes */
+.light-on {
+    color: gold;
+}
+
+.light-off {
+    color: #bbb;
+}
+
+.filter-on {
+    color: #00796b;
+}
+
+.filter-off {
+    color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .main-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section,
+    .fish-section {
+        width: 90%;
+    }
+}
+

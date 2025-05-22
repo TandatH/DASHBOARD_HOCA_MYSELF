@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smart Aquarium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Aquarium Dashboard</h1>
+
+        <div class="main-grid">
+            <!-- Fish Section -->
+            <div class="section fish-section">
+                <h2>Cá</h2>
+                <div class="aquarium_gif">
+                    <img src="aquarium_git.gif" alt="Fish" width="120">
+                </div>
+                <div class="realtime-clock">
+                    <canvas id="analogClock" width="130" height="130"></canvas>
+                     <div id="clock" class="digital-clock"></div>
+                </div>
+
+            </div>
+
+            <!-- Sensors -->
+            <div class="section">
+                <h2 class="section-title">Cảm Biến</h2>
+                <div class="sensors-grid">
+                    <div class="sensor-box">
+                        <div class="sensor-icon temp-icon">🌡️</div>
+                        <div class="sensor-label">Nhiệt độ</div>
+                        <div class="sensor-value" id="tempSensor">-- °C</div>
+                    </div>
+                    <div class="sensor-box">
+                        <div class="sensor-icon humidity-icon">💧</div>
+                        <div class="sensor-label">Độ ẩm</div>
+                        <div class="sensor-value" id="humiditySensor">-- %</div>
+                    </div>
+                    <div class="sensor-box">
+                        <div class="sensor-icon water-temp-icon">🌊</div>
+                        <div class="sensor-label">Nhiệt độ nước</div>
+                        <div class="sensor-value" id="waterTempSensor">-- °C</div>
+                    </div>
+                    <div class="sensor-box">
+                        <div class="sensor-icon water-level-icon">📏</div>
+                        <div class="sensor-label">Mực nước</div>
+                        <div class="sensor-value" id="waterLevel">-- cm</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="section controls-section">
+                <h2 class="section-title">Điều Khiển</h2>
+
+                <!-- Đèn -->
+                <div class="device-box">
+                    <img src="led-light_anh.png" class="device-status" id="lightImg" alt="Light" width="80">
+                    <div class="device-label">Đèn</div>
+                    <div class="control-buttons">
+                        <button class="btn-on" onclick="toggleDevice('light', true)">ON</button>
+                        <button class="btn-off" onclick="toggleDevice('light', false)">OFF</button>
+                    </div>
+                    <div class="timer-controls">
+                        <input type="time" id="lightTimer">
+                        <button class="btn-timer" onclick="setTimer('light')">Hẹn giờ</button>
+                    </div>
+                    <div class="timer-status" id="lightTimerStatus"></div>
+                </div>
+
+                <!-- Máy lọc -->
+                <div class="device-box">
+                    <img src="anh2.png" class="device-status" id="filterImg" alt="Filter" width="80">
+                    <div class="device-label">Máy lọc</div>
+                    <div class="control-buttons">
+                        <button class="btn-on" onclick="toggleDevice('filter', true)">ON</button>
+                        <button class="btn-off" onclick="toggleDevice('filter', false)">OFF</button>
+                    </div>
+                    <div class="timer-controls">
+                        <input type="time" id="filterTimer">
+                        <button class="btn-timer" onclick="setTimer('filter')">Hẹn giờ</button>
+                    </div>
+                    <div class="timer-status" id="filterTimerStatus"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="function.js"></script>
+    
+</body>
+</html>
